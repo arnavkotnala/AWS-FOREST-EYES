@@ -1,12 +1,11 @@
-# Used only if you connect Amplify Hosting to a Git repository (optional).
-# It publishes the frontend files only; the backend runs on AWS Lambda.
 version: 1
 frontend:
   phases:
     build:
       commands:
+        - cd forest-eyes-final
         - node scripts/build.js
   artifacts:
-    baseDirectory: dist/site
+    baseDirectory: forest-eyes-final/dist/site
     files:
       - '**/*'
